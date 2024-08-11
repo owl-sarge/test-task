@@ -10,9 +10,7 @@ pipeline {
         timestamps ()
     }
     stages {
-        stage('Checkout') {    options {
-        timestamps ()
-    }
+        stage('Checkout') {  
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/owl-sarge/test-task.git'  ]]])
             }
