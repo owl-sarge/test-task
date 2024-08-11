@@ -1,6 +1,6 @@
 FROM golang:1.16 AS build
 RUN apt-get update && apt-get install --no-install-recommends -y make=4.3-4.1
-WORKDIR /
+WORKDIR /go/
 COPY . .
 WORKDIR /go/word-cloud-generator
 RUN make
