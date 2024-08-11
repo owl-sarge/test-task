@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wcg
+spec:
+  selector:
+    matchLabels:
+      app: wcg
+  template:
+    metadata:
+      labels:
+        app: wcg
+    spec:
+      containers:
+        - name: wcg
+          image: owlsarge/wcg:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8888
+
