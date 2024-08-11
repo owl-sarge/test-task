@@ -14,7 +14,7 @@ pipeline {
         timestamps ()
     }
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/dev']], userRemoteConfigs: [[url: 'https://github.com/owl-sarge/test-chellenge.git'  ]]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/owl-sarge/test-task.git'  ]]])
             }
         }
         
